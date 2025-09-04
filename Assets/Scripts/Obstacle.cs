@@ -1,4 +1,6 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
+using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 public class Obstacle : MonoBehaviour
 {
@@ -12,22 +14,28 @@ public class Obstacle : MonoBehaviour
 
     
     [SerializeField]  ObstacleType obstacleType = ObstacleType.Static;
-    [SerializeField]  float movementSpeed = 2f;
-    [SerializeField]  float movementDistance = 2f;
-    [SerializeField]  float rotationSpeed = 45f;
-    
-    
+    [SerializeField]  float movementSpeed ;
+    [SerializeField]  float movementDistance ;
+    [SerializeField]  float rotationSpeed ;
 
+
+    Rigidbody2D rb;
      SpriteRenderer spriteRenderer;
      Vector3 startPosition;
      Vector3 startScale;
-
+    
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
         startScale = transform.localScale;
         UpdateObstacleColor();
+    }
+
+    private void FixedUpdate()
+    {
+        HandleObstacleBehavior();
     }
 
     void Update()
@@ -40,20 +48,18 @@ public class Obstacle : MonoBehaviour
         switch (obstacleType)
         {
             case ObstacleType.MovingHorizontal:
-                
-                float xMovement = Mathf.Sin(Time.time * movementSpeed) * movementDistance;
-                transform.position = startPosition + new Vector3(xMovement, 0, 0);
+
+                HandleHirozontalMovment();
                 break;
 
             case ObstacleType.MovingVertical:
-                
-                float yMovement = Mathf.Sin(Time.time * movementSpeed) * movementDistance;
-                transform.position = startPosition + new Vector3(0, yMovement, 0);
+
+                HandleVerticalMovment();
                 break;
 
             case ObstacleType.Rotating:
-               
-                transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+
+                HandleRotation();
                 break;
 
             
@@ -63,6 +69,28 @@ public class Obstacle : MonoBehaviour
                 
                 break;
         }
+    }
+
+    private void HandleHirozontalMovment()
+    {
+        float targetX = startPosition.x + Mathf.Sin(Time.time * movementSpeed) * movementDistance;
+
+        Vector2 targetPosition = new Vector2(targetX,rb.position.y);
+        Vector2 direction = (targetPosition - rb.position);
+        rb.AddForce(direction * movementSpeed);
+    }
+
+    private void HandleVerticalMovment()
+    {
+        float targetY = startPosition.y + Mathf.Sin(Time.time * movementSpeed) * movementDistance;
+        Vector2 targetPosition = new Vector2(rb.position.x,targetY);
+        Vector2 direction = (targetPosition - rb.position);
+        rb.AddForce(direction * movementSpeed);
+    }
+
+    private void HandleRotation()
+    {
+        rb.AddTorque(rotationSpeed * Time.fixedDeltaTime);
     }
 
     private void UpdateObstacleColor()
@@ -104,8 +132,6 @@ public class Obstacle : MonoBehaviour
             }
         }
     }
-
-    
     public void ChangeColor(ColorChanger.PlayerColor newColor)
     {
         obstacleColor = newColor;

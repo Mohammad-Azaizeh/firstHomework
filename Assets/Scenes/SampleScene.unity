@@ -324,9 +324,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -337,8 +361,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: obstacleColor
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalScale.y
@@ -401,9 +433,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -414,8 +470,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: obstacleColor
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: rotationSpeed
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalScale.y
@@ -478,9 +546,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -491,20 +583,28 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: obstacleColor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.1369095
+      value: 2.624869
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.92
+      value: 1.9251
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.25
+      value: -1.494
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalPosition.z
@@ -555,9 +655,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -765,9 +889,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -778,8 +926,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: obstacleColor
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: rotationSpeed
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalScale.y
@@ -842,9 +1002,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -855,8 +1039,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: obstacleColor
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalScale.y
@@ -1003,9 +1195,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -1016,8 +1232,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: obstacleColor
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: rotationSpeed
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementDistance
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalScale.y
@@ -1159,9 +1387,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -1228,9 +1480,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -1241,20 +1517,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: obstacleColor
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.4684544
+      value: 2.3548756
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.95
+      value: 3.9408
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.14
+      value: 1.0833
       objectReference: {fileID: 0}
     - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1435,12 +1719,121 @@ Transform:
   m_GameObject: {fileID: 1318215541}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.06, y: 0.0494, z: 0}
+  m_LocalPosition: {x: -8.34, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 8.586392, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1444842007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1681045940434231885, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Name
+      value: Obstacle (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: obstacleType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: obstacleColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177836191825978965, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: movementDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.3548756
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0043440848
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9999906
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409976295201781415, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 179.502
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
 --- !u!1 &2019404278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,9 +1890,33 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Mass
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513500053610638623, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_Name
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6308464565245169575, guid: 49a1b8725a35d984ab7e0c12f4e0f287, type: 3}
       propertyPath: m_TagString
@@ -1571,6 +1988,7 @@ SceneRoots:
   - {fileID: 380581558}
   - {fileID: 539238547}
   - {fileID: 1190472120}
+  - {fileID: 1444842007}
   - {fileID: 421000311}
   - {fileID: 2019404280}
   - {fileID: 1020628546}
