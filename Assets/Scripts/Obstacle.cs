@@ -1,29 +1,27 @@
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEngine.Rendering.VirtualTexturing.Debugging;
+using System.Collections;
 
 public class Obstacle : MonoBehaviour
 {
     public enum ObstacleType { Static, MovingHorizontal, MovingVertical, Rotating }
 
-    
-    [SerializeField]  ColorChanger.PlayerColor obstacleColor = ColorChanger.PlayerColor.Red;
-    [SerializeField]  Color redColor = Color.red;
-    [SerializeField]  Color greenColor = Color.green;
-    [SerializeField]  Color blueColor = Color.blue;
+    [SerializeField] ColorChanger.PlayerColor obstacleColor = ColorChanger.PlayerColor.Red;
+    [SerializeField] Color redColor = Color.red;
+    [SerializeField] Color greenColor = Color.green;
+    [SerializeField] Color blueColor = Color.blue;
+    [SerializeField] ObstacleType obstacleType = ObstacleType.Static;
+    [SerializeField] float movementSpeed = 2f;
+    [SerializeField] float movementDistance = 2f;
+    [SerializeField] float rotationSpeed = 45f;
+    [SerializeField] float obstacleMass = 1000f;
 
-    
-    [SerializeField]  ObstacleType obstacleType = ObstacleType.Static;
-    [SerializeField]  float movementSpeed ;
-    [SerializeField]  float movementDistance ;
-    [SerializeField]  float rotationSpeed ;
-
-
+    SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
-     SpriteRenderer spriteRenderer;
-     Vector3 startPosition;
-     Vector3 startScale;
-    
+    Vector2 startPosition;
+    Vector2 startScale;
+    Coroutine movementCoroutine;
+    Coroutine rotationCoroutine;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -31,68 +29,79 @@ public class Obstacle : MonoBehaviour
         startPosition = transform.position;
         startScale = transform.localScale;
         UpdateObstacleColor();
-    }
 
-    private void FixedUpdate()
-    {
-        HandleObstacleBehavior();
-    }
+        rb.mass = obstacleMass;
 
-    void Update()
-    {
-        HandleObstacleBehavior();
-    }
+        if (obstacleType != ObstacleType.Rotating)
+        {
+            rb.freezeRotation = true;
+        }
 
-    private void HandleObstacleBehavior()
-    {
         switch (obstacleType)
         {
             case ObstacleType.MovingHorizontal:
-
-                HandleHirozontalMovment();
+                movementCoroutine = StartCoroutine(MoveHorizontalCoroutine());
                 break;
 
             case ObstacleType.MovingVertical:
-
-                HandleVerticalMovment();
+                movementCoroutine = StartCoroutine(MoveVerticalCoroutine());
                 break;
 
             case ObstacleType.Rotating:
-
-                HandleRotation();
+                rotationCoroutine = StartCoroutine(RotateCoroutine());
                 break;
-
-            
 
             case ObstacleType.Static:
             default:
-                
                 break;
         }
     }
-
-    private void HandleHirozontalMovment()
+    void FixedUpdate()
     {
-        float targetX = startPosition.x + Mathf.Sin(Time.time * movementSpeed) * movementDistance;
-
-        Vector2 targetPosition = new Vector2(targetX,rb.position.y);
-        Vector2 direction = (targetPosition - rb.position);
-        rb.AddForce(direction * movementSpeed);
+        if (obstacleType != ObstacleType.Static)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
     }
-
-    private void HandleVerticalMovment()
+    IEnumerator MoveHorizontalCoroutine()
     {
-        float targetY = startPosition.y + Mathf.Sin(Time.time * movementSpeed) * movementDistance;
-        Vector2 targetPosition = new Vector2(rb.position.x,targetY);
-        Vector2 direction = (targetPosition - rb.position);
-        rb.AddForce(direction * movementSpeed);
-    }
+        float time = 0f;
+        float leftBound = startPosition.x - movementDistance;
+        float rightBound = startPosition.x + movementDistance;
 
-    private void HandleRotation()
+        while (true)
+        {
+            float targetX = Mathf.PingPong(time * movementSpeed, movementDistance * 2) + leftBound;
+            Vector2 targetPosition = new Vector2(targetX, startPosition.y);
+            rb.MovePosition(targetPosition);
+
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+    }
+    IEnumerator MoveVerticalCoroutine()
     {
-        rb.AddTorque(rotationSpeed * Time.fixedDeltaTime);
-    }
+        float time = 0f;
+        float bottomBound = startPosition.y - movementDistance;
+        float topBound = startPosition.y + movementDistance;
 
+        while (true)
+        {
+            float targetY = Mathf.PingPong(time * movementSpeed, movementDistance * 2) + bottomBound;
+            Vector2 targetPosition = new Vector2(startPosition.x, targetY);
+            rb.MovePosition(targetPosition);
+            time += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+    }
+    IEnumerator RotateCoroutine()
+    {
+        while (true)
+        {
+            rb.MoveRotation(rb.rotation + rotationSpeed * Time.fixedDeltaTime);
+            yield return new WaitForFixedUpdate();
+        }
+    }
     private void UpdateObstacleColor()
     {
         switch (obstacleColor)
@@ -108,24 +117,35 @@ public class Obstacle : MonoBehaviour
                 break;
         }
     }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         HandlePlayerCollision(collision.gameObject);
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
+            return;
+        }
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
     }
 
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            return;
+        }
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+    }
     private void HandlePlayerCollision(GameObject playerObject)
     {
-        
         if (GameManager.instance != null && !GameManager.instance.IsGameActive())
             return;
-
         ColorChanger player = playerObject.GetComponent<ColorChanger>();
         if (player != null && player.CurrentColor != obstacleColor)
         {
             Debug.Log("Wrong color!");
-
-            
             if (GameManager.instance != null)
             {
                 GameManager.instance.GameOver();
@@ -136,5 +156,16 @@ public class Obstacle : MonoBehaviour
     {
         obstacleColor = newColor;
         UpdateObstacleColor();
+    }
+    void OnDisable()
+    {
+        if (movementCoroutine != null)
+        {
+            StopCoroutine(movementCoroutine);
+        }
+        if (rotationCoroutine != null)
+        {
+            StopCoroutine(rotationCoroutine);
+        }
     }
 }
